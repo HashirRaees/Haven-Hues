@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "Jerash";
+  src: url("/fonts/Jerash.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  /* optional: specify unicode-range if you want to limit glyphs */
+  /* unicode-range: U+000-5FF; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat";
+}
+body {
+  background-color: #333;
+  font-family: "Poppins";
+}
+header {
+  height: 100px;
+  width: 100%;
+  /* background-color: antiquewhite; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar {
+  height: 80%;
+  width: 85%;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 200px;
+  margin-top: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.side-menu ul {
+  display: none;
+}
+#menu-toggle {
+  display: none;
+}
+.hamburger {
+  display: none;
+}
+.side-menu {
+  display: none;
+}
+.nav-links {
+  height: 100%;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 100px;
+  /* background-color: aqua; */
+}
+.nav-links a {
+  text-decoration: none;
+  color: #babdc2;
+  font-weight: 400;
+  font-size: 1.4vw;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #f5f2f2;
+}
+.logo:hover {
+  filter: brightness(2);
+}
+
+/* hero-section */
+
+.hero {
+  height: 100vh;
+  /* background-color: antiquewhite; */
+  display: flex;
+  background: url(./assets/bg-image2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+.hero-text {
+  height: 500px;
+  width: 84%;
+  display: flex;
+  padding: 10px 20px;
+  flex-direction: column;
+  justify-content: end;
+  gap: 30px;
+  /* background-color: aqua; */
+}
+.hero-text h1 {
+  font-size: 7vw;
+  line-height: 80px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+}
+.hero-text h2 {
+  color: #111;
+  font-size: 24px;
+  /* font-family: monospace; */
+  font-weight: 700;
+}
+.hero-text p {
+  color: white;
+  padding: 10px;
+  width: 55%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(128, 128, 128, 0.37);
+  text-align: left;
+  font-size: 1.25vw;
+}
+.hero-text h1 span {
+  font-family: "Jerash";
+  text-transform: none;
+  font-weight: 200;
+  font-size: 9vw;
+}
+.icons-box {
+  height: 140px;
+  width: 30%;
+  background-color: #333333d2;
+  border: 2px solid white;
+  /* backdrop-filter: blur(10px); */
+  border-radius: 70px;
+  display: flex;
+  align-self: self-start;
+  margin-left: 120px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: aliceblue; */
+}
+.cta-icons{
+    height: 40%;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    /* background-color: aqua; */
+}
+.cta-icons i{
+    font-size: 33px;
+}
+@media screen and (max-width: 600px) and (min-width: 340px) {
+  .logo {
+    width: 130px;
+    margin-top: 7px;
+  }
+  header{
+    height: 80px;
+  }
+  .navbar {
+    width: 91%;
+  }
+  /* Hide checkbox */
+  #menu-toggle {
+    display: none;
+  }
+  .icons {
+    display: flex;
+    gap: 20px;
+  }
+  /* Hamburger Icon - now positioned on right */
+  .hamburger {
+    position: fixed;
+    right: 0;
+    top: 7px;
+    height: 10%;
+    width: 20%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .hamburger i {
+    font-size: 25px;
+    font-weight: 200;
+    color: #babdc2;
+  }
+
+  /* Side Menu - open from right */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: -380px; /* changed from left */
+    height: 100%;
+    width: 80%;
+    background-color: #fff6f63f;
+    backdrop-filter: blur(10px);
+    padding-top: 60px;
+    transition: 0.6s ease;
+    display: block;
+    z-index: 1000;
+  }
+  .side-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 0px;
+    /* justify-content: center; */
+  }
+  .side-menu ul li {
+    padding: 20px 0px;
+  }
+  .side-menu ul .nav-items {
+    padding: 13px 30px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  .side-menu ul a {
+    color:white;
+    font-size: 9vw;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .side-menu ul a:hover {
+    color: #f5f2f2;
+  }
+
+  /* Slide menu when checked */
+  #menu-toggle:checked ~ .side-menu {
+    right: 0;
+  }
+
+  /* Optional: shift content to the left when menu is open */
+  #menu-toggle:checked ~ .content {
+    margin-right: 250px;
+    transition: margin 0.3s ease;
+  }
+  .nav-links {
+    display: none;
+  }
+  /* hero-section */
+  .hero {
+    height: 80vh;
+    gap: 20px;
+    justify-content: center;
+    background-position: 50%;
+  }
+  .hero-text {
+    height: 60%;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    /* background-color: aqua; */
+  }
+  .icons-box {
+    height: 120px;
+    width: 85%;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 30px;
+    margin-left: 0px;
+    align-self: center;
+  }
+  .hero-text h1{
+    line-height: 30px;
+    font-size: 10vw;
+  }
+  .hero-text h1 span{
+    font-size: 13vw;
+  }
+  .hero-text h2{
+    font-size: 4vw;
+  }
+  .hero-text p{
+    font-size: 3vw;
+    width: 80%;
+  }
+}
