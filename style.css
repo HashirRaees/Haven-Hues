@@ -14,9 +14,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 h1,
 h2,
 h3,
+li,
 h4 {
   font-family: "Montserrat";
 }
@@ -27,6 +31,10 @@ body {
 header {
   height: 100px;
   width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  z-index: 10;
   /* background-color: antiquewhite; */
   display: flex;
   justify-content: center;
@@ -84,23 +92,24 @@ header {
 /* hero-section */
 
 .hero {
-  height: 100vh;
+  height: 90vh;
   /* background-color: antiquewhite; */
   display: flex;
   background: url(./assets/bg-image2.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   justify-content: end;
   align-items: center;
   gap: 20px;
+  padding: 15px 0px;
   flex-direction: column;
 }
 .hero-text {
   height: 500px;
   width: 84%;
   display: flex;
-  padding: 10px 20px;
+  padding: 10px 2px;
   flex-direction: column;
   justify-content: end;
   gap: 30px;
@@ -136,8 +145,8 @@ header {
   font-size: 9vw;
 }
 .icons-box {
-  height: 140px;
-  width: 30%;
+  height: 100px;
+  width: 25%;
   background-color: #333333d2;
   border: 2px solid white;
   /* backdrop-filter: blur(10px); */
@@ -150,24 +159,138 @@ header {
   flex-direction: column;
   /* background-color: aliceblue; */
 }
-.cta-icons{
-    height: 40%;
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    /* background-color: aqua; */
+.icons-box p {
+  font-size: 20px;
+  color: white;
 }
-.cta-icons i{
-    font-size: 33px;
+.cta-icons {
+  height: 40%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  color: white;
+  /* background-color: aqua; */
+}
+.cta-icons i {
+  font-size: 33px;
+}
+.second {
+  padding: 20p 20px;
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+}
+.left-img {
+  height: 650px;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 30px; */
+  align-items: center;
+  flex-direction: column;
+  /* background-color: aqua; */
+}
+.left-img img {
+  width: 370px;
+  /* object-fit: cover !important; */
+}
+.left-img h2 {
+  font-size: 1.7vw;
+  color: white;
+  text-transform: uppercase;
+}
+.right-img {
+  height: 650px;
+  width: 60%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  flex-direction: column;
+  /* background-color: antiquewhite; */
+}
+.right-img img {
+  width: 680px;
+}
+.parallex {
+  margin-top: 140px;
+  height: 600px;
+  background: url(./assets/parallex.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+.art {
+  margin-top: 30px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  /* background-color: antiquewhite; */
+}
+.inner-art {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  /* background-color: aqua; */
+}
+.art-text {
+  height: 50%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 0px;
+  /* background-color: #333; */
+  color: white;
+}
+.art-text h1 {
+  font-size: 4.5vw;
+  text-transform: uppercase;
+}
+.art-text h2 {
+  font-weight: 500;
+}
+.art-box {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  /* background-color: blue; */
+}
+.cta-box {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  border-radius: 60px;
+  border: 2px solid white;
+}
+.cta-box h1 {
+  text-transform: uppercase;
+}
+.cta-box a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  transition: 0.5s;
+}
+.cta-box a:hover {
+  transform: rotate(360deg);
 }
 @media screen and (max-width: 600px) and (min-width: 340px) {
   .logo {
     width: 130px;
-    margin-top: 7px;
+    margin-top: 13px;
   }
-  header{
+  header {
     height: 80px;
   }
   .navbar {
@@ -232,7 +355,7 @@ header {
     transition: 0.3s;
   }
   .side-menu ul a {
-    color:white;
+    color: white;
     font-size: 9vw;
     font-weight: 500;
     text-decoration: none;
@@ -257,39 +380,115 @@ header {
   }
   /* hero-section */
   .hero {
-    height: 80vh;
-    gap: 20px;
+    height: 90vh;
+    gap: 30px;
     justify-content: center;
     background-position: 50%;
   }
   .hero-text {
     height: 60%;
     width: 100%;
+    padding: 10px 20px;
     justify-content: center;
     gap: 20px;
     /* background-color: aqua; */
   }
   .icons-box {
-    height: 120px;
-    width: 85%;
-    background-color: transparent;
+    height: 70px;
+    width: 55%;
+    gap: 4px;
+    /* background-color: transparent; */
     border: 2px solid white;
     border-radius: 30px;
-    margin-left: 0px;
+    margin-left: 20px;
+    /* align-self: center; */
+  }
+  .icons-box p {
+    font-size: 14px;
+    color: white;
+  }
+  .hero-text h1 {
+    line-height: 35px;
+    font-size: 10.5vw;
+  }
+  .hero-text h1 span {
+    font-size: 13.5vw;
+  }
+  .hero-text h2 {
+    font-size: 4.5vw;
+  }
+  .hero-text p {
+    font-size: 3.5vw;
+    width: 80%;
+  }
+  .cta-icons i {
+    font-size: 18px;
+  }
+  .second {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .left-img {
+    height: 450px;
+    width: 85%;
+    align-self: self-start;
+  }
+  .left-img h2 {
+    font-size: 4.2vw;
     align-self: center;
   }
-  .hero-text h1{
-    line-height: 30px;
-    font-size: 10vw;
+  .left-img img {
+    width: 250px;
   }
-  .hero-text h1 span{
-    font-size: 13vw;
+  .right-img {
+    height: 250px;
+    width: 87%;
   }
-  .hero-text h2{
-    font-size: 4vw;
+  .right-img img {
+    width: 320px;
   }
-  .hero-text p{
-    font-size: 3vw;
-    width: 80%;
+  .parallex {
+    height: 400px;
+    margin-top: 80px;
+    background-position: 30%;
+  }
+  .inner-art {
+    height: 320px;
+    width: 98%;
+  }
+  .art-text {
+    width: 100%;
+    height: 220px;
+  }
+  .art-text h1 {
+    font-size: 7vw;
+  }
+  .art-text h2 {
+    font-size: 20px;
+  }
+  .art-text p {
+    font-size: 15px;
+  }
+  .art-box {
+    height: 100px;
+    justify-content: center;
+  }
+  .cta-box {
+    height: 90%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    color: white;
+    border-radius: 60px;
+    border: 2px solid white;
+  }
+  .cta-box a {
+    font-size: 20px;
+  }
+  .cta-box h1 {
+    font-size: 4.5vw;
   }
 }
