@@ -285,6 +285,38 @@ header {
 .cta-box a:hover {
   transform: rotate(360deg);
 }
+.visual{
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+.inner-visual{
+  padding: 10px 0px;
+  width: 90%;
+  gap: 20px;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+}
+.visual-text{
+  height: 10%;
+  width: 100%;
+}
+.visual-text h2{
+  text-transform: uppercase;
+  color: white;
+  font-size: 2.2vw;
+}
+.visual-images{
+  display: flex;
+  height: 85%;
+  width: 100%;
+  /* background-color: antiquewhite; */
+  justify-content: space-between;
+}
+.visual-images img{
+  width: 350px;
+}
 @media screen and (max-width: 600px) and (min-width: 340px) {
   .logo {
     width: 130px;
@@ -422,7 +454,7 @@ header {
     width: 80%;
   }
   .cta-icons i {
-    font-size: 18px;
+    font-size: 26px;
   }
   .second {
     flex-direction: column;
@@ -475,7 +507,7 @@ header {
     justify-content: center;
   }
   .cta-box {
-    height: 90%;
+    height: 70%;
     width: 70%;
     display: flex;
     justify-content: center;
@@ -490,5 +522,21 @@ header {
   }
   .cta-box h1 {
     font-size: 4.5vw;
+  }
+  .visual-images{
+    padding: 10px 10px;
+    /* height: 100%; */
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .visual-images img{
+    width: 300px;
+  }
+  .visual-text h2{
+    font-size: 5vw;
+  }
+  .visual-text{
+    height: 20px;
   }
 }
