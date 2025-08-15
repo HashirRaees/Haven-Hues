@@ -47,6 +47,38 @@ gsap.from("#about p",{
         // markers : true,
     }
 })
+gsap.from(".contact h2",{
+    y:20,
+    opacity : 0,
+    duration :1,
+    scrollTrigger :{
+        scroller:"body",
+        trigger: ".contact h2",
+        start: "top 80%",
+        // markers : true,
+    }
+})
+gsap.from(".contact p",{
+    y:-20,
+    opacity : 0,
+    duration :1,
+    scrollTrigger :{
+        scroller:"body",
+        trigger: ".contact p",
+        start: "top 80%",
+        // markers : true,
+    }
+})
+gsap.from(".contact-icons",{
+    opacity : 0,
+    duration :1,
+    scrollTrigger :{
+        scroller:"body",
+        trigger: ".contact-icons",
+        start: "top 80%",
+        // markers : true,
+    }
+})
 const track = document.querySelector(".marquee-track");
 const trackWidth = track.scrollWidth / 2; // half because we duplicated
 
