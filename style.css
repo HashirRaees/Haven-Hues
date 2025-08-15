@@ -11,10 +11,7 @@
 html {
   scroll-behavior: smooth;
 }
-li, a{
-  color: #fca542;
-}
-p{
+p {
   color: #928686;
 }
 body {
@@ -48,9 +45,14 @@ header img {
   gap: 40px;
 }
 .navbar a {
+  background: url(./assets/9121526_18958.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
   text-decoration: none;
   margin-left: 20px;
-  color: white;
+  /* background-position: -30%; */
   font-weight: 600;
   font-family: "poppins";
   font-size: 1.2rem;
@@ -75,7 +77,7 @@ header img {
 
 .hero {
   text-align: center;
-  padding: 50px 0px;
+  padding: 10px 0px;
 }
 
 .hero img {
@@ -92,9 +94,16 @@ header img {
   margin-top: -20px;
 }
 .hero h1 {
+  background: url(./assets/9121526_18958.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: transparent;
+  font-weight: 800;
+  -webkit-background-clip: text;
   font-family: "Montserrat";
-  font-size: 5vw;
-  line-height: 4rem;
+  font-size: 7vw;
+  margin-bottom: -35px;
+  /* line-height: 4rem; */
 }
 .hero span {
   font-weight: 400;
@@ -104,12 +113,12 @@ header img {
 }
 .patti {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 70px;
   background-color: #d9136a;
   padding: 0px 0;
   overflow: hidden;
+  transform: rotateZ(3deg);
 }
-
 .marquee-track {
   display: flex;
   gap: 60px;
@@ -123,6 +132,9 @@ header img {
 }
 
 .marquee h3 {
+  padding: 0px 10px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
   font-family: "Montserrat";
   font-size: 2vw;
   font-weight: 500;
@@ -134,6 +146,7 @@ header img {
   columns: 3;
   column-gap: 10px;
   padding: 40px;
+  margin-top: 50px;
 }
 
 .gallery img {
@@ -158,17 +171,25 @@ header img {
   margin: auto;
 }
 .about h2 {
-  font-size: 4vw;
+  background: url(./assets/9121526_18958.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 3rem;
   font-family: "Montserrat";
 }
 .about p {
   /* color: #d9136a; */
-  font-family: 'poppins';
+  background-color: #e9e7e7;
+  font-family: "poppins";
   font-weight: 500;
+  padding: 7px 5px;
+  border-radius: 10px;
   font-size: 20px;
 }
 footer {
-  background: #f5f5f5;
+  background: #e9e7e7;
   text-align: center;
   padding: 20px;
   font-weight: 600;
@@ -177,9 +198,64 @@ footer {
 footer span {
   color: #d9136a;
 }
+.contact {
+  text-align: center;
+  padding: 40px 20px;
+  background: #ffffff;
+}
+
+.contact h2 {
+  background: url(./assets/9121526_18958.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-family: "Montserrat", serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  font-size: 2.2rem;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.15);
+}
+
+/* Brand Hover Colors */
+.contact-icons a.instagram:hover {
+  color: #e4405f;
+}
+
+.contact-icons a.whatsapp:hover {
+  color: #25d366;
+}
+
+.contact-icons a.email:hover {
+  color: #0072c6;
+}
+
 @media (max-width: 600px) {
   .gallery {
     columns: 1;
+    margin-top: 0px;
   }
   header {
     padding: 15px 20px;
@@ -252,10 +328,13 @@ footer span {
   .nav-item {
     font-family: "Montserrat";
     /* color: #111; */
-    color: #d9136a;
+    background: url(./assets/9121526_18958.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: transparent;
+    -webkit-background-clip: text;
     font-weight: 600;
-    background-color: white;
-    padding: 5px 40px;
+    padding: 5px 30px;
     border-radius: 40px;
     border: 1px solid #d9136a;
     text-decoration: none;
@@ -264,30 +343,39 @@ footer span {
   }
   .hero h1 {
     font-size: 13vw;
-    line-height: 35px;
+    /* line-height: 35px; */
+    margin-bottom: -25px;
   }
-  .hero{
+  .hero {
     padding: 40px 0px;
   }
   .hero span {
     font-size: 50px;
-  }
-  .about h2 {
-    font-size: 9vw;
+    margin-bottom: 30px;
   }
   .about p {
     font-size: 14px;
   }
   .hero h2 {
-    font-size: 4vw;
+    font-size: 3.3vw;
   }
   .gallery {
     margin-bottom: -60px;
   }
-  .patti{
-    margin-top: 30px;
+  .patti {
+    margin-top: 50px;
+    transform: rotateZ(4deg);
   }
-  .marquee h3{
-    font-size: 3.5vw;
+  .marquee h3 {
+    font-size: 4.5vw;
+  }
+  .contact {
+    padding: 40px 15px;
+  }
+  .contact-icons {
+    gap: 20px;
+  }
+  .contact-icons a {
+    font-size: 2rem;
   }
 }

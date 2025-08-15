@@ -60,3 +60,16 @@ gsap.to(track, {
   }
 });
 
+const track2 = document.querySelector(".marquee-track2");
+const trackWidth2 = track.scrollWidth / 2; // half because we duplicated
+
+gsap.to(track2, {
+  x: trackWidth2,
+  duration: 20, // adjust speed
+  ease: "none",
+  repeat: -1,
+  modifiers: {
+    x: gsap.utils.unitize(x => parseFloat(x) % trackWidth) // loop seamlessly
+  }
+});
+
