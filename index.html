@@ -5,127 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Haven Hues</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lightbox
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+      rel="stylesheet"
+    /> -->
   </head>
   <body>
     <header>
+      <img src="./assets/Haven_hues.png" alt="" />
       <nav class="navbar">
-        <!-- logo -->
-        <img src="./assets/Logo.png" alt="" class="logo" />
-        <div class="nav-links">
-          <a href="/"><h2>Home</h2></a>
-          <a href="gallery.html"><h2>Gallery</h2></a>
-        </div>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <!-- Mobile menu -->
+      <!-- Menu Toggle -->
+      <input type="checkbox" id="menu-toggle" />
 
-        <!-- Mobile menu -->
-        <!-- Menu Toggle -->
-        <input type="checkbox" id="menu-toggle" />
+      <!-- Hamburger Icon -->
+      <label for="menu-toggle" class="hamburger">
+        <i class="ri-menu-line"></i>
+      </label>
 
-        <!-- Hamburger Icon -->
-        <label for="menu-toggle" class="hamburger">
-          <i class="ri-menu-line"></i>
-        </label>
-
-        <!-- Side Menu -->
-        <nav class="side-menu">
-          <ul>
-            <a href="/"><li class="nav-item">Home</li></a>
-            <a href="gallery.html"><li class="nav-item">Gallery</li></a>
-            <div class="icons">
-              <div class="github2">
-                <a href="https://github.com/HashirRaees" target="_blank"
-                  ><i class="ri-instagram-line"></i
-                ></a>
-              </div>
-              <div class="github2">
-                <a
-                  href="https://www.linkedin.com/in/hashir-raees-1311752ba/"
-                  target="_blank"
-                  ><i class="ri-facebook-fill"></i
-                ></a>
-              </div>
-            </div>
-          </ul>
-        </nav>
+      <!-- Side Menu -->
+      <nav class="side-menu">
+        <ul>
+          <a class="nav-item" href="#home"><li>Home</li></a>
+          <a class="nav-item" href="#about"><li>About</li></a>
+          <a class="nav-item" href="#gallery"><li>Gallery</li></a>
+          <a class="nav-item" href="#contact"><li>Contact</li></a>
+        </ul>
       </nav>
     </header>
 
-    <!-- hero-section -->
-    <section class="hero">
-      <div class="hero-text">
-        <h1>
-          Haven Hues <br />
-          <span>Artistry atelier</span>
-        </h1>
-        <h2>Art That Speaks Beyond the Frame</h2>
-        <p>
-          Welcome to Haven Hues, where artistry meets elegance. We specialize in
-          creating timeless, bespoke designs that reflect your unique vision.
-          From concept to final creation, every detail is crafted with care and
-          precision. Discover a space where creativity is nurtured, and your
-          ideas come to life.
-        </p>
-      </div>
-      <div class="icons-box">
-        <div class="cta-icons">
-          <i class="ri-facebook-fill"></i>
-          <i class="ri-instagram-line"></i>
+    <section class="hero" id="home" data-aos="fade-up">
+      <h1>
+        Haven Hues <br />
+        <span>Artistery atelier</span>
+      </h1>
+      <h2>Visual stories through color and form</h2>
+      <div class="patti">
+        <div class="marquee-track">
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+
+          <!-- duplicate set for seamless loop -->
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
+          <div class="marquee"><h3>Haven Hues</h3></div>
         </div>
       </div>
     </section>
 
-    <!-- second-section -->
-    <section class="second">
-      <div class="left-img">
-        <img src="./assets/tulip.jpg" alt="" />
-        <h2>Capturing timeless moments</h2>
-      </div>
-      <div class="right-img">
-        <h2></h2>
-        <img src="./assets/scenery.jpg" alt="" />
-      </div>
+    <section class="gallery" id="gallery">
+      <!-- Replace with your own artwork images -->
+      <img src="/assets/img-1.jpeg" alt="Art 1" />
+      <img src="/assets/img-2.jpeg" alt="Art 2" />
+      <img src="/assets/img-3.jpeg" alt="Art 3" />
+      <img src="/assets/img-4.jpeg" alt="Art 4" />
+      <img src="/assets/img-2.jpeg" alt="Art 5" />
+      <img src="/assets/img-1.jpeg" alt="Art 6" />
     </section>
 
-     <!-- parallex bg -->
-
-    <section class="parallex"></section>
-
-    <!-- cta section -->
-
-    <section class="art">
-      <div class="inner-art">
-        <div class="art-text">
-          <h1>Art in every frame</h1>
-          <h2>Emotion through imagery</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, nostrum doloribus ut, sint doloremque dolores aut porro sed assumenda omnis</p>
-        </div>
-        <div class="art-box">
-          <div class="cta-box">
-            <h1>Instagram</h1>
-            <a href=""><i class="ri-arrow-right-up-line"></i></a>
-          </div>
-        </div>
-      </div>
+    <section class="about" id="about">
+      <h2>About Us</h2>
+      <p>
+        I’m an artist driven by curiosity and a deep love for visual
+        storytelling. My work blends traditional techniques with modern
+        approaches, allowing me to explore texture, color, and form in fresh and
+        unexpected ways.
+      </p>
+      <p>
+        Every piece I create is an attempt to capture an emotion, a memory, or a
+        fleeting moment that words alone cannot express. I draw inspiration from
+        nature, music, architecture, and everyday life — always seeking to
+        translate feelings into visual experiences.
+      </p>
+      <p>
+        Whether through bold strokes or delicate details, I want my art to
+        invite viewers to pause, reflect, and feel a personal connection. This
+        portfolio is a collection of those moments — fragments of my journey,
+        shared with you.
+      </p>
     </section>
 
-    <!-- visual storytelling -->
+    <footer>&copy; 2025 <span>Haven Hues. </span>All Rights Reserved.</footer>
 
-    <section class="visual">
-      <div class="inner-visual">
-        <div class="visual-text">
-          <h2>Visual storytelling expert</h2>
-        </div>
-        <div class="visual-images">
-          <img src="./assets/img-1.jpg" alt="">
-          <img src="./assets/img-2.jpg" alt="">
-          <img src="./assets/img-3.jpg" alt="">
-        </div>
-      </div>
-    </section>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
       integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
@@ -138,6 +129,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
