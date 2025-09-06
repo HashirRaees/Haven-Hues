@@ -24,14 +24,11 @@ body {
 }
 header {
   padding: 10px 40px;
-  background: linear-gradient(
-    to right,
-    rgb(253, 231, 234),
-    rgb(255, 148, 164)
-  ) !important;
+ background-color: rgba(255, 190, 200, 0.404);
   position: sticky;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -148,7 +145,16 @@ header img {
   padding: 40px;
   margin-top: 50px;
 }
-
+.gallery h2{
+   background: url(./assets/9121526_18958.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 3rem;
+  font-family: "Montserrat";
+  text-align: center;
+}
 .gallery img {
   display: flex;
   margin-bottom: 15px;
@@ -165,10 +171,41 @@ header img {
 }
 
 .about {
-  padding: 60px 20px;
+  padding: 60px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.inner-abt{
+  height: 500px;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #25d366; */
+}
+.abt-text{
+  height: 100%;
+  width: 40%;
+  /* background-color: #0072c6; */
+}
+.abt-img{
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  /* border-radius: 20px; */
+  /* background-color: #25d366; */
+}
+.abt-img img{
+  width: 470px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.abt-text p{
   text-align: center;
-  max-width: 700px;
-  margin: auto;
+  font-family: 'Poppins';
+  font-size: 18px;
 }
 .about h2 {
   background: url(./assets/9121526_18958.jpg);
@@ -179,15 +216,7 @@ header img {
   font-size: 3rem;
   font-family: "Montserrat";
 }
-.about p {
-  /* color: #d9136a; */
-  background-color: #e9e7e7;
-  font-family: "poppins";
-  font-weight: 500;
-  padding: 7px 5px;
-  border-radius: 10px;
-  font-size: 20px;
-}
+
 footer {
   background: #e9e7e7;
   text-align: center;
@@ -351,10 +380,33 @@ footer span {
   }
   .hero span {
     font-size: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+  }
+  .about{
+    margin-top: -40px;
+  }
+  .inner-abt{
+    flex-direction: column;
+    height: 600px;
+    margin-top: -30px;
+    width: 92%;
+  }
+  .abt-text{
+    height: 50%;
+    width: 100%;
+  }
+  .abt-img{
+    height: 40%;
+    justify-content: center;
+    width: 100%;
+    /* background-color: #0072c6; */
+  }
+  .abt-img img{
+    width: 300px;
   }
   .about p {
-    font-size: 14px;
+    text-align: center;
+    font-size: 12px;
   }
   .hero h2 {
     font-size: 3.3vw;
